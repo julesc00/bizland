@@ -9,6 +9,8 @@
 
     {% block css %}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
     {% endblock %}
@@ -18,7 +20,7 @@
 
     <title>{{ title }}</title>
 </head>
-<body>
+<body id="home" class="scrollspy">
 
 {% block content %}
 
@@ -34,9 +36,9 @@
         </script>
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+{#  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>#}
         <script src="{% static 'js/materialize.js' %}"></script>
-        <script src="{% static 'js/chart.js' %}"></script>
-
         <script>
             $(document).ready(function() {
                 //Custom JS & JQuery here
@@ -44,16 +46,25 @@
                 // Init Sidenav
                 $('.sidenav').sidenav();
 
+                // Init Scrollspy
+                $('.scrollspy').scrollspy();
+
                 // ScrollFire
                 const options = [
                     {
                         selector: ".main-text", offset:0, callback: function (el) {
-                            M.fadeInImage($(el))
+                            Materialize.fadeInImage($(el))
                         }
-                    }
+                    },
+                    {
+                        selector: ".navbar-fixed", offset: 1500, callback: function () {
+                            $('nav').removeClass('transparent')
+                            $('nav').addClass('blue-grey darken-3')
+                        }
+                    },
                 ]
 
-                M.scrollFire(options);
+                Materialize.scrollFire(options);
 
             })
         </script>
