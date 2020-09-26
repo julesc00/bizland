@@ -24,3 +24,11 @@ K
 LICENSE,0/3/0398ccd0f49298b10a3d76a47800d2ebecd49859
 L
 app/templates/app/boxes.html,8/b/8bdd69db4f7c86fd06941ee7c62f5b4fc5ab24eb
+L
+app/templates/app/about.html,4/8/48b21f34db567ec6f11670bcd092ddfc1f720376
+S
+#app/templates/app/testimonials.html,7/f/7f3f1ee678db5d5db17f6c13b139d41611642eb4
+M
+app/templates/app/footer.html,7/c/7c6acd8c3dc5a371f62379bd0b3a9f6abeb0ca7a
+N
+app/templates/app/contact.html,9/d/9d8b5d68e7ab3688a36f6921dd22d60c7608efe2
